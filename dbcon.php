@@ -2,8 +2,8 @@
 $con = mysqli_connect("localhost","root","","gymnsb");
 
 // Check connection
-if (!$con) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-?>
-<!-- Visit codeastro.com for more projects -->
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+?><!-- Visit codeastro.com for more projects -->
